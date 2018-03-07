@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SW</title>
+</head>
+<body>
+<p style="vertical-align: middle"><font size="3px">Reveal ur identity</font></p>
+<form action="/who" id="myForm" align-content="center" method="POST">
+	Secret Number : <input type="text" name="rnd" >
+	<br/><br/>
+	<button type="submit" id="who" style="vertical-align: middle">Press</button>
+	<br/>
+	{% for i in get_flashed_messages() %}
+	<p><font color="red" style="vertical-align: middle">{{ i }}</font></p>
+	{% endfor %}
+</form>
+</body>
+</html>
